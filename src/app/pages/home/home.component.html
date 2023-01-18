@@ -1,0 +1,32 @@
+
+<div class="container mt-5">
+  <a  routerLink="add-todo" class="btn btn-success">Ajouter une todo </a>
+  <div class="mt-5">
+      <div class="row">
+        <div class="col-lg-4 col-md-4">
+          <div class="card">
+            <div class="card-body">
+              Nombre Total de Todos <span class="badge bg-primary">{{todos}} </span>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <div class="card">
+            <div class="card-body">
+              Nombre de Todos terminés <span class="badge bg-success">0</span>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <div class="card">
+            <div class="card-body">
+              Nombre de en corbeille<span class="badge bg-warning">{{trash}} </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

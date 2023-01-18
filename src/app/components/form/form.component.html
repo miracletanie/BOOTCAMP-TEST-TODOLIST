@@ -1,0 +1,31 @@
+
+<div class="m-5">
+  <div class="card">
+    <div class="card-header">
+      <h2>Formulaire d'ajout de tâche</h2>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="titre">Titre</label>
+            <input type="text" class="form-control" id="titre" [(ngModel)]="item.title" >
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="description_item">Description</label>
+            <textarea id="description_item" class="form-control" cols="30" rows="10" [(ngModel)]="item.description"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+
+      <button (click)="addItem()" class="btn btn-success">Valider</button>
+    </div>
+  </div>
+
+</div>
+
+

@@ -1,0 +1,43 @@
+<div class="table-responsive">
+  <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+
+          <th>
+            Titre
+          </th>
+          <th>
+            Description
+          </th>
+          <th>
+            Statut
+          </th>
+          <th>
+            Option
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let elt  of todos" [ngStyle]="{'text-decoration': elt.state ? 'line-through': 'none'}">
+            <td>{{elt.title}} </td>
+            <td>{{elt.description}} </td>
+            <td>
+
+              <span [ngClass]="{'badge bg-success': elt.state}">
+                <span *ngIf="elt.state">Terminée</span>
+              </span>
+              <span [ngClass]="{'badge bg-warning': !elt.state}">
+                <span *ngIf="!elt.state">En attente</span>
+              </span>
+            </td>
+            <td *ngIf="liste">
+              <a (click)="complete(elt)" class="btn btn-success mx-2" *ngIf="!elt.state">Terminer</a>
+              <a (click)="removeTodo(elt)" class="btn btn-danger">Supprimer</a>
+            </td>
+            <td *ngIf="!liste">
+              <a (click)="restaurer(elt)" class="btn btn-success mx-2">Restaurer</a>
+            </td>
+        </tr>
+      </tbody>
+  </table>
+</div>
